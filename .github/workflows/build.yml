@@ -51,3 +51,13 @@ jobs:
      #To build dotnet application using MSBuild
       - name: Build
         run: msbuild ./eShopOnWeb.sln
+
+    #To Packackage dotnet Application
+      - name: Package
+        run: |
+          dotnet pack .\src\ApplicationCore --configuration Release
+          dotnet pack .\src\BlazorAdmin --configuration Release
+          dotnet pack .\src\BlazorShared --configuration Release
+          dotnet pack .\src\Infrastructure --configuration Release
+          dotnet pack .\src\PublicApi --configuration Release
+          dotnet pack .\src\Web --configuration Release
