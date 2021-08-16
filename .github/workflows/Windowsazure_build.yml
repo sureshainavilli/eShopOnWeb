@@ -40,7 +40,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"tamilselvansellamuthu_eShopOnWeb" /d:sonar.login="${{ secrets.WINDOWS_SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.WINDOWS_SONAR_HOST_URL }}"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"sureshainavilli_eShopOnWeb" /d:sonar.login="${{ secrets.WINDOWS_SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.WINDOWS_SONAR_HOST_URL }}"
           dotnet build "eShopOnWeb.sln"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.WINDOWS_SONAR_TOKEN }}"
 
